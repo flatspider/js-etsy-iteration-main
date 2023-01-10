@@ -84,6 +84,17 @@ for (let i = 0; i < eightMaterialFilteredArray.length; i++){
 
 }
 
+// 6. Show me how to calculate how many items were made by their sellers.
+
+// "who_made": "someone_else", "who_made": "i_did",
+
+var selfMadeArray = items.filter(function(arr){
+    return arr.who_made === "i_did"; //This returns true or false. If true, it keeps it in the filtered list. 
+});
+
+console.log(selfMadeArray.length + " were made by their sellers.");
+
+
 
 
 
