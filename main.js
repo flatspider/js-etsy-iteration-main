@@ -66,11 +66,35 @@ for (let i = 0; i < materialFilteredArray.length; i++){
 }
 
 
-
-
-
-
+// 5. Show me how to find which items are made of eight or more materials.
     
+var eightMaterialFilteredArray = items.filter(function(arr){
+    return arr.materials.length >= 8; //This returns true or false. If true, it keeps it in the filtered list. 
+});
+
+
+// For each array returned, print the console log statement X contains X materials.
+for (let i = 0; i < eightMaterialFilteredArray.length; i++){
+    console.log(eightMaterialFilteredArray[i].title + " contains " + eightMaterialFilteredArray[i].materials.length + " materials:");
+
+    // For each material listed in the array, console log the material.
+    for (let j = 0; j < eightMaterialFilteredArray[i]["materials"].length; j++) {
+        console.log(eightMaterialFilteredArray[i]["materials"][j]);
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }());
