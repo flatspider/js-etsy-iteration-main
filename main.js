@@ -23,18 +23,7 @@ function averagePrices(items,currency = 'USD') {
 
 console.log("The average price is $" + averagePrices(items));
 //First response. Should equal $23.86
-//GBP price should be 19 dollars. 
-
-
-
-
-
-
-
-
-
-
-
+ 
 
 
 
@@ -43,15 +32,28 @@ console.log("The average price is $" + averagePrices(items));
 
 var priceFilteredArray = items.filter(function(it){
 
-
     return it.price >= 14 && it.price <= 18;
-
 
 });
 
 console.log(priceFilteredArray); //The console does not like when you concatenate this.
 
 
+// 3. Show me how find the item with a "GBP" currency code and print its name and price.
+//GBP price should be 19 dollars.
+
+var currencyFilteredArray = items.filter(function(arr){
+    return arr.currency_code === 'GBP';
+});
+
+console.log(currencyFilteredArray[0].title + " costs " + currencyFilteredArray[0].price);
+
+
+
+// Show me list items that are made out of wood. 
+
+// The filter function needs to return items that have a item[i].materials array that containst the word WOOD.
+// A double filter? A match or contains call? 
 
 
 
