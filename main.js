@@ -46,14 +46,24 @@ var currencyFilteredArray = items.filter(function(arr){
     return arr.currency_code === 'GBP';
 });
 
-console.log(currencyFilteredArray[0].title + " costs " + currencyFilteredArray[0].price);
+console.log(currencyFilteredArray[0].title + " costs £" + currencyFilteredArray[0].price);
 
 
 
-// Show me list items that are made out of wood. 
+// 4. Show me list of items that are made out of wood. 
 
-// The filter function needs to return items that have a item[i].materials array that containst the word WOOD.
+// The filter function needs to return items that have a item[i].materials array that contains the word WOOD.
 // A double filter? A match or contains call? 
+
+
+var materialFilteredArray = items.filter(function(arr){
+    return arr.materials.includes('wood'); //This returns true or false. If true, it keeps it in the filtered list. 
+});
+
+// Not sure if this is best practice. 
+for (let i = 0; i < materialFilteredArray.length; i++){
+    console.log(materialFilteredArray[i].title + " is made of wood");
+}
 
 
 
