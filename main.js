@@ -1,9 +1,7 @@
 (function() {
     "use strict";
 
-
-// console.log(items[1].price); // This returns the first items price.
-
+// console.log(items[1].price); // This returns the second items price.
 
 function averagePrices(items,currency = 'USD') {
     // Default averages US dollar prices.
@@ -24,7 +22,36 @@ function averagePrices(items,currency = 'USD') {
 }
 
 console.log("The average price is $" + averagePrices(items));
-//Should equal $23.86
+//First response. Should equal $23.86
+//GBP price should be 19 dollars. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Show me how to get an array of items that cost between $14.00 and $18.00 USD. Please console.log the answer.
+
+
+var priceFilteredArray = items.filter(function(it){
+
+
+    return it.price >= 14 && it.price <= 18;
+
+
+});
+
+console.log(priceFilteredArray); //The console does not like when you concatenate this.
+
+
 
 
 
